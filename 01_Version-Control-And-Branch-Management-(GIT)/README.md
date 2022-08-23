@@ -1,4 +1,4 @@
-## Resume Materi Version Control and Branch Management (Git)
+# Resume Materi Version Control and Branch Management (Git)
 
 Nama : Rizky Nurfauzi   
 Kelas : React A
