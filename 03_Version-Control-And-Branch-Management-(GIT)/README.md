@@ -1,7 +1,7 @@
 # Resume Materi Version Control and Branch Management (Git)
 
-Nama : Rizky Nurfauzi   
-Kelas : React A
+> Nama : Rizky Nurfauzi   
+> Kelas : React A
 
 Git adalah version control system populer yang digunakan para developer untuk mengembangkan software secara bersama-bersama
 1. Pengertian Git maupun Version control system itu sendiri
