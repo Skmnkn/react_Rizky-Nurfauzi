@@ -1,12 +1,12 @@
-## Resume Materi Figma
+# Resume Materi Figma
 
-Nama : Rizky Nurfauzi   
-Kelas : React A
+> Nama : Rizky Nurfauzi   
+> Kelas : React A
 
 Figma adalah salah satu *Vector Graphics Editor* dan *Tool Prototype* yang berbasis web dan mempunyai fitur offline menggunakan aplikasi desktop untuk macOS dan Windows.   
 Figma juga membantu untuk para Designer bisa saling berkerjasama secara *real-time* untuk membuat suatu Prototype dikarenakan mudahnya *web-based application*, selain dari banyak keuntungannya seperti free, *import sketch files*, maupun *integrated high-quality prototyping*.
 
-## Task : UI/UX Figma  
+# Task : UI/UX Figma  
 
 > Main resource :  [Figma](https://www.figma.com/file/Tk4c9OwKIjylGkhp0qtyss/Tugas-Prototype)
 
