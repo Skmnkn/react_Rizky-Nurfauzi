@@ -1,0 +1,49 @@
+a {
+    color: grey !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #71c55d !important;
+}
+
+.greet {
+    margin-top: 100px;
+}
+
+.main-content img {
+    width: 50px;
+}
+
+.phone {
+    width: 300px !important;
+}
+
+.drop-content a{
+    margin-top: 20px;
+    display: block;
+}
+
+.footer-section {
+    background-color: #2a2c30;
+}
+
+h4 {
+    text-align: start;
+    color: white !important;
+    font-size: 16px;
+}
+
+
+.aboutus-content a {
+    font-size: 14px;
+    display: block;
+    font-weight: lighter;
+    text-align: start;
+    color: white !important;
+    margin-top: 10px;
+}
+
+.aboutus-content a:hover {
+    color: #71c55d !important;
+}
