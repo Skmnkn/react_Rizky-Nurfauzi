@@ -17,7 +17,6 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-12 col-sm-12 col-12">
-                {/* <div class="container"> */}
                 <div className="row align-items-center navig">
                   <div className="col-lg-3 col-md-3 col-sm-3 text-md-center text-sm-center text-lg-right">
                     <a href="index.html" className="aktif">
@@ -34,7 +33,6 @@ const Home = () => {
                     <a href="form.html">CONTACT</a>
                   </div>
                 </div>
-                {/* </div> */}
               </div>
             </div>
           </div>

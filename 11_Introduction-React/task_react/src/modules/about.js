@@ -73,26 +73,18 @@ const About = () => {
             </div>
             <div className="col-lg-3 col-md-3 col-sm-12 col-12 text-lr-left text-md-center text-sm-center">
               <h6>Social Media:</h6>
-              {/* <div class="col-3 text-center"> */}
               <a href="https://www.facebook.com/AlterraAcademy">
                 <img className="logo-sosmed" src={facebook} />
               </a>
-              {/* </div> */}
-              {/* <div class="col-3 text-center"> */}
               <a href="https://twitter.com/">
                 <img className="logo-sosmed" src={twitter} />
               </a>
-              {/* </div> */}
-              {/* <div class="col-3 text-center"> */}
               <a href="https://www.instagram.com/alterra.academy/">
                 <img className="logo-sosmed" src={instagram} />
               </a>
-              {/* </div> */}
-              {/* <div class="col-3 text-center"> */}
               <a href="https://id.linkedin.com/">
                 <img className="logo-sosmed" src={linkedin} />
               </a>
-              {/* </div> */}
             </div>
             <div className="col-lg-4 col-md-5 col-sm-12 col-12 pt-3">
               <h6 className="text-lg-right text-md-center text-sm-center kopi">
