@@ -66,3 +66,9 @@ _Handling Event_ adalah suatu metode untuk menangani sebuah event/ aksi yang dib
 2. Form Events (`onChange`, `onSubmit`).
 3. Mouse Events (`onClick`, `onDoubleClick`, `onMouseHover`).
 4. Generic Events (`onError`, `onLoad`).
+
+### Screenshots Task Event Handling
+
+![TodoList Menu](../../Github/13_Event-Handling/Sreenshots/TodoListMenu.png)
+
+![Alert Menu](../../Github/13_Event-Handling/Sreenshots/AlertMenu.png)
