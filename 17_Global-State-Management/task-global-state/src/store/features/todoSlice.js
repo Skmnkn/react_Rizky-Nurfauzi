@@ -1,38 +1,37 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
+import mockData from "../../Data/todo-data.json";
 
-const initialValue = [
-  {
-    id: 1,
-    title: "Mengerjakan Exercise",
-    completed: true,
-  },
-  {
-    id: 2,
-    title: "Mengerjakan Assignment",
-    completed: false,
-  },
-];
+const initialState = mockData;
 
 export const todoSlice = createSlice({
   name: "todo",
-  initialState: initialValue,
+  initialState,
   reducers: {
     onAddHandler: (state, action) => {
       const newTasks = {
         id: uuid(),
-        tittle: action.payload,
+        title: action.payload,
         completed: false,
       };
-      state.todos = [...state.todos, newTasks];
+      return (state = [...state, newTasks]);
     },
     onDeleteHandler: (state, action) => {
-      state.todos = state.todos.filter((todo) => {
+      const newTodoList = state.filter((todo) => {
         return todo.id !== action.payload;
       });
+      return (state = newTodoList);
+    },
+    onChecked: (state, action) => {
+      const checkedTodo = state.map((data) =>
+        data.id === action.payload
+          ? { ...data, completed: !data.completed }
+          : data
+      );
+      return checkedTodo;
     },
   },
 });
 
-export const { onAddHandler, onDeleteHandler } = todoSlice.actions;
+export const { onAddHandler, onDeleteHandler, onChecked } = todoSlice.actions;
 export default todoSlice.reducer;

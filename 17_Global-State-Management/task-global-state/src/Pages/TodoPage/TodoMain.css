@@ -37,9 +37,9 @@
   width: 100%;
   padding: 10px 0px 10px 10px;
   border: 0;
-  box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 1);
-  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 1);
-  -moz-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 1);
+  box-shadow: -1px 0px 29px 10px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: -1px 0px 29px 10px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: -1px 0px 29px 10px rgba(0, 0, 0, 0.51);
 }
 
 .todos {
@@ -63,8 +63,8 @@
 }
 
 .todo button {
-  border-radius: 50%;
-  padding: 15px 5px;
+  border-radius: 10px;
+  padding: 10px 5px;
   cursor: pointer;
   border: 0;
 }

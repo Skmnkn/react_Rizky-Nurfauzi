@@ -1,6 +1,8 @@
 import TodoList from "./TodoList";
+import { useSelector } from "react-redux";
 
-const TodoAction = ({ todos, onDelete, checked }) => {
+const TodoAction = ({ onDelete, checked }) => {
+  const todos = useSelector((state) => state.todo);
   return (
     <div className="todos">
       <ul>
