@@ -4,7 +4,7 @@ import NameForm from "./FormCoding";
 import userEvent from "@testing-library/user-event";
 
 describe("FormCoding", () => {
-  test("Render FormCoding Components", () => {
+  test("Should Render FormCoding Components", () => {
     render(<NameForm />);
 
     const titleLabel = screen.getByText("Pendaftaran Peserta Coding Bootcamp");
@@ -34,7 +34,7 @@ describe("FormCoding", () => {
     expect(labelHarapan).toBeInTheDocument();
   });
 
-  test("Form Input", () => {
+  test("Should Render Form Input", () => {
     render(<NameForm />);
 
     fireEvent.input(screen.getByRole("textbox", { name: /nama/i }), {

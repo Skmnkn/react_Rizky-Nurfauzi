@@ -3,6 +3,7 @@ import axios from "axios";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Search from "./Search";
+import { act } from "@testing-library/react-hooks";
 
 jest.mock("axios");
 
