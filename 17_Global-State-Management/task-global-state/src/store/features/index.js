@@ -1,8 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import todo from "./todoSlice";
 
-const reducers = combineReducers({
+const rootReducers = combineReducers({
   todo,
 });
 
-export default reducers;
+export default rootReducers;
