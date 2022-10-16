@@ -6,10 +6,11 @@ import { fetchTodo } from "../../store/features/todoSlice";
 const TodoAction = ({ deleteTodo }) => {
   const dispatch = useDispatch();
   const listOfTodo = useSelector((state) => state.todo.data);
+  const componentStatus = useSelector((state) => state.todo.componentStatus);
   // console.log(listOfTodo);
   useEffect(() => {
     dispatch(fetchTodo());
-  }, [dispatch]);
+  }, [dispatch, componentStatus]);
 
   return (
     <div className="todos">

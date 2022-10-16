@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { onAddHandler } from "../../store/features/todoSlice";
+// import { onAddHandler } from "../../store/features/todoSlice";
+import { createTodo } from "../../store/features/todoSlice";
 
 export default function TodoForm() {
   const [inputTodo, setInputTodo] = useState("");
@@ -11,8 +12,10 @@ export default function TodoForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const todo = formData.get("todo");
     let newTodos = inputTodo
-      ? dispatch(onAddHandler(inputTodo))
+      ? dispatch(createTodo({ todo }))
       : alert("Masukkan data terlebih dahulu");
     setInputTodo("");
     return newTodos;
@@ -20,14 +23,15 @@ export default function TodoForm() {
 
   return (
     <div className="todoForm">
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Add todo..."
           onChange={handleChange}
           value={inputTodo}
+          name="todo"
         />
-        <input type="submit" className="submitButton" onClick={handleSubmit} />
+        <input type="submit" className="submitButton" />
       </form>
     </div>
   );

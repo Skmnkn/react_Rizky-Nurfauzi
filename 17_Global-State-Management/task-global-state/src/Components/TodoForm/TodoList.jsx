@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { onChecked, deleteTodo } from "../../store/features/todoSlice";
+import { deleteTodo, checkedTodo } from "../../store/features/todoSlice";
 
 const TodoList = ({ todo, onDelete }) => {
   const [isCheck, setIsCheck] = useState(true);
+
+  const { id, completed } = todo;
 
   const dispatch = useDispatch();
   return (
@@ -17,8 +19,8 @@ const TodoList = ({ todo, onDelete }) => {
             <input
               type="checkbox"
               defaultChecked={todo.completed ? isCheck : !isCheck}
-              onClick={() => dispatch(onChecked(todo.id))}
-            ></input>
+              onClick={() => dispatch(checkedTodo({ id, completed }))}
+            />
             {todo.todo}
           </li>
         </>

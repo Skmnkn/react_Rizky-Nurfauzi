@@ -8,8 +8,26 @@ const initialState = {
 
 export const fetchTodo = createAsyncThunk("fetchTodo/todo", async () => {
   try {
-    const res = await APITODO.getAllTodo();
-    return res.data.todoApp_todoList;
+    const response = await APITODO.getAllTodo();
+    return response.data.todoApp_todoList;
+  } catch (error) {
+    console.log(error.message);
+  }
+});
+
+export const createTodo = createAsyncThunk("createTodo/todo", async (data) => {
+  try {
+    const response = await APITODO.createTodos(data);
+    return response.data.insert_todoApp_todoList.returning[0];
+  } catch (error) {
+    console.log(error.message);
+  }
+});
+
+export const checkedTodo = createAsyncThunk("updateTodo/todo", async (data) => {
+  try {
+    const response = await APITODO.updateTodo(data);
+    return response;
   } catch (error) {
     console.log(error.message);
   }
@@ -21,48 +39,32 @@ export const deleteTodo = createAsyncThunk("delete/todos", async (id) => {
     console.log(response);
     return response.data.delete_todoApp_todoList.returning[0];
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 });
 
 export const todoSlice = createSlice({
   name: "todo",
   initialState,
-  // reducers: {
-  //   onAddHandler: (state, action) => {
-  //     const newTasks = {
-  //       id: uuid(),
-  //       title: action.payload,
-  //       completed: false,
-  //     };
-  //     return (state = [...state, newTasks]);
-  //   },
-  //   onDeleteHandler: (state, action) => {
-  //     const newTodoList = state.filter((todo) => {
-  //       return todo.id !== action.payload;
-  //     });
-  //     return (state = newTodoList);
-  //   },
-  //   onChecked: (state, action) => {
-  //     const checkedTodo = state.map((data) =>
-  //       data.id === action.payload
-  //         ? { ...data, completed: !data.completed }
-  //         : data
-  //     );
-  //     return checkedTodo;
-  //   },
-  // },
   extraReducers(builder) {
     builder
       .addCase(fetchTodo.fulfilled, (state, action) => {
         state.data = action.payload;
       })
+      .addCase(createTodo.fulfilled, (state, action) => {
+        state.data.push(action.payload);
+        state.componentStatus = !state.componentStatus;
+        console.log(action);
+      })
+      .addCase(checkedTodo.fulfilled, (state, action) => {
+        state.componentStatus = !state.componentStatus;
+      })
       .addCase(deleteTodo.fulfilled, (state, action) => {
-        state.fetchStatus = !state.fetchStatus;
+        state.componentStatus = !state.componentStatus;
         state.data = state.data.filter((item) => item.id !== action.payload.id);
       });
   },
 });
 
-export const { onAddHandler, onDeleteHandler, onChecked } = todoSlice.actions;
+// export const { onAddHandler, onDeleteHandler, onChecked } = todoSlice.actions;
 export default todoSlice.reducer;
