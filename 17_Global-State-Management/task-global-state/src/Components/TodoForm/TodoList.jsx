@@ -1,23 +1,31 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { deleteTodo, checkedTodo } from "../../store/features/todoSlice";
 
-const TodoList = ({ todo, checked, onDelete }) => {
+const TodoList = ({ todo, onDelete }) => {
   const [isCheck, setIsCheck] = useState(true);
 
+  const { id, completed } = todo;
+
+  const dispatch = useDispatch();
   return (
     <div className="todo">
       {
         <>
-          <li className={todo.completed ? "completed" : "incomplete"}>
+          <li
+            key={todo.id}
+            className={todo.completed ? "completed" : "incomplete"}
+          >
             <input
               type="checkbox"
               defaultChecked={todo.completed ? isCheck : !isCheck}
-              onClick={() => checked(todo)}
-            ></input>
-            {todo.title}
+              onClick={() => dispatch(checkedTodo({ id, completed }))}
+            />
+            {todo.todo}
           </li>
         </>
       }
-      <button onClick={() => onDelete(todo.id)}>Delete</button>
+      <button onClick={() => dispatch(deleteTodo(todo.id))}>Delete</button>
     </div>
   );
 };

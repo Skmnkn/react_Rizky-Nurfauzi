@@ -63,3 +63,14 @@ Merupakan proses pengambilan data dari Server/API ke Aplikasi kita
   | redirect | follow, error, manual |
   | integrity | subresource integrity value |
   | cache | cache mode(default, reload) |
+
+## Task DATA Fetching
+
+1. GET Axios Data
+   ![GET Axios Data](Screenshots/Fetch-Data/GETAxioxData.png)
+2. POST Axios Data
+   ![POST Axios Data](Screenshots/Fetch-Data/GETAxioxData.png)
+3. PUT Axios Data
+   ![POST Axios Data](Screenshots/Fetch-Data/POSTAxiosData.png)
+4. DELETE Axios Data
+   ![POST Axios Data](Screenshots/Fetch-Data/DELETEAxiosData.png)
