@@ -1,12 +1,12 @@
 import "../../Assets/Css/Home.css";
 const ListItem = (props) => {
-  const { id, nama, umur, jenisKelamin } = props.data;
+  const { id, name, age, gender } = props.data;
 
   return (
     <tr>
-      <td>{nama}</td>
-      <td>{umur}</td>
-      <td>{jenisKelamin}</td>
+      <td>{name}</td>
+      <td>{age}</td>
+      <td>{gender}</td>
       <td className="removeBorder" onClick={() => props.hapusPengunjung(id)}>
         <button>Hapus</button>
       </td>
