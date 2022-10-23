@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../Assets/Css/Home.css";
+import "../Home/Home.css";
 
 function PassengerInput(props) {
   const [state, setState] = useState({
@@ -64,7 +64,7 @@ function PassengerInput(props) {
   }
 
   return (
-    <>
+    <div>
       <div onSubmit={handleSubmit} style={viewMode}>
         <p>Masukkan Nama Anda</p>
         <input
@@ -98,7 +98,7 @@ function PassengerInput(props) {
       <button className="inputan" onClick={handleBukaInput} style={editMode}>
         Masukkan Nama Pelanggan
       </button>
-    </>
+    </div>
   );
 }
 

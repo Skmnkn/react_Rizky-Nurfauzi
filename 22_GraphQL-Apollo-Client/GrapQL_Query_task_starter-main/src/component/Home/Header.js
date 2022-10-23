@@ -1,4 +1,4 @@
-import "../Assets/Css/Home.css";
+import "./Home.css";
 const Header = () => {
   return (
     <div className="header">

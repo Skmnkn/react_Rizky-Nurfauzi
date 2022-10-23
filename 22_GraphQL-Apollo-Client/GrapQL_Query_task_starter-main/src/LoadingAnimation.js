@@ -3,12 +3,12 @@ export default function LoadingAnimation() {
     <svg
       style={{
         margin: "auto",
-        background: "rgb(241, 242, 243)",
+        background: "rgb(250, 250, 250)",
         display: "block",
         shapeRendering: "auto",
       }}
-      width="200px"
-      height="200px"
+      width="100px"
+      height="100px"
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
     >

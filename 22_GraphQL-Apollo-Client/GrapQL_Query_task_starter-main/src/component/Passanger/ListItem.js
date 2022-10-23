@@ -1,4 +1,4 @@
-import "../../Assets/Css/Home.css";
+import "../Home/Home.css";
 const ListItem = (props) => {
   const { id, name, age, gender } = props.data;
 
