@@ -39,6 +39,7 @@ function PassengerInput(props) {
           age: "",
           gender: "Pria",
         });
+        alert("Data telah ditambahkan");
       }
     } else {
       alert("Data masih ada yang kosong");

@@ -42,6 +42,7 @@ function UpdatePassengers(props) {
           age: "",
           gender: "Pria",
         });
+        alert("Data telah diubah");
       }
     } else {
       alert("Data masih ada yang kosong");
@@ -105,9 +106,9 @@ function UpdatePassengers(props) {
           Selesai
         </button>
       </div>
-      <button className="inputan" onClick={handleBukaInput} style={editMode}>
+      {/* <button className="inputan" onClick={handleBukaInput} style={editMode}>
         Update Data Pelanggan
-      </button>
+      </button> */}
     </div>
   );
 }

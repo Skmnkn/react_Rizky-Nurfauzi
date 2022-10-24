@@ -27,6 +27,7 @@ const ListPassenger = (props) => {
               key={item.id}
               data={item}
               hapusPengunjung={props.hapusPengunjung}
+              onClickEdit={props.onClickEdit}
             />
           ))}
         </thead>
