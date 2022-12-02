@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #78399c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navbars {
+  background-color: #401957;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#navtitle {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#home {
+  height: 100vh;
+  background-color: #78399c;
+}
+
+#paralax {
+  margin-top: 50px;
+}
+.scene .bg-img {
+  width: 110%;
+}
+
+#homebutton {
+  color: #8952a9;
+  font-family: "Open Sans", sans-serif;
+}
+
+#homebutton a {
+  color: #8952a9;
+}
+
+#title {
   color: white;
+  margin-top: 70px;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+#title .mb-4 {
+  text-shadow: 0px 2px 3px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#title .mt-5 {
+  text-shadow: 0px 2px 3px black;
+}
+
+#whatis {
+  background-image: url("assets/ds1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#whatis h1 {
+  padding-top: 280px;
+  text-shadow: 0px 2px 3px black;
+}
+
+#game {
+  height: 100vh;
+  background-color: #78399c;
+}
+
+#game h2 {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+#pricing {
+  height: 100vh;
+  background-color: #78399c;
+  background-image: url("assets/bld1.jpg");
+  background-size: cover;
+}
+
+#pricing li {
+  margin-bottom: 20px;
+}
+
+#pricing a {
+  background-color: #78399c;
+}
+
+#contact {
+  height: 100vh;
+  background-color: #78399c;
+}
+
+#contact form label {
+  margin-top: 10px;
+}
+
+#contact .col-6 {
+  margin-top: 100px;
+}
+
+.contact-form {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  #paralax {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 767.98px) {
+  #paralax {
+    display: none;
+  }
+  #home {
+    background-image: url("assets/ds2.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 50px;
   }
 }
