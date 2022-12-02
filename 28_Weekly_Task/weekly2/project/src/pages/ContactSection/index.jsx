@@ -1,4 +1,40 @@
+import { useState } from "react";
+import { toast } from "react-toastify";
+
 export const ContactSection = () => {
+  const BASE_DATA = {
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  };
+
+  const [values, setValues] = useState(BASE_DATA);
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (values === "") {
+      toast.error("Empty Data!");
+    } else {
+      toast.success(`Nama : ${values.name}
+            Email : ${values.email}
+            Phone Number : ${values.number}
+            Message : ${values.message}
+            `);
+    }
+    setValues(BASE_DATA);
+  };
+
   return (
     <>
       <section id="contact">
@@ -18,7 +54,7 @@ export const ContactSection = () => {
               <div className="contact-form p-5 bg-white">
                 <div className="form-box">
                   <h4>Send Us a Message</h4>
-                  <form onsubmit="submitForm(event)" id="form">
+                  <form id="form" onSubmit={handleSubmit}>
                     <fieldset className="form-group">
                       <label htmlFor="yourName">Your Name (required)</label>
                       <input
@@ -27,6 +63,7 @@ export const ContactSection = () => {
                         id="yourName"
                         placeholder="Enter Your Name"
                         name="name"
+                        onChange={handleChange}
                         required
                       />
                     </fieldset>
@@ -40,6 +77,7 @@ export const ContactSection = () => {
                         id="yourEmail"
                         name="email"
                         placeholder="Enter Your Email"
+                        onChange={handleChange}
                         required
                       />
                     </fieldset>
@@ -51,6 +89,8 @@ export const ContactSection = () => {
                         id="yourPhone"
                         name="number"
                         placeholder="Enter Your Phone"
+                        onChange={handleChange}
+                        required
                       />
                     </fieldset>
                     <fieldset className="form-group">
@@ -61,6 +101,7 @@ export const ContactSection = () => {
                         id="yourMessage"
                         defaultValue={""}
                         name="message"
+                        onChange={handleChange}
                       />
                     </fieldset>
                     <button
