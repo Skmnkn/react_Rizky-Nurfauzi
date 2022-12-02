@@ -12,11 +12,7 @@ function App() {
       <HomePage />
       <Footer />
       <Helmet>
-        <script>
-          var scene = document.getElementById("scene"); var parallax = new
-          Parallax(scene);
-        </script>
-
+        <title>RKTPC | Gaming PCs made simple</title>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       </Helmet>
     </>
